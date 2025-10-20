@@ -5,7 +5,7 @@ if string.split(identifyexecutor() or "None", " ")[1] == "Xeno" then
 	getgenv().WebSocket = nil
 end
 
-local scripturl = "https://cdn.authguard.org/virtual-file/6aa36dc4efd54745b90"
+local scripturl = "https://cdn.authguard.org/virtual-file/6aa36dc4efd54745b903abaa2956d198"
 local repo: string = "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/"
 local showGUI = true
 
@@ -15,7 +15,7 @@ end
 
 if isfile("Deathsaken/key.json") then
     local file = readfile("Deathsaken/key.json")
-    if file == "300MEM" then
+    if file == "ObfFixed" then
         loadstring(game:HttpGet(scripturl))()
         showGUI = false
     end
@@ -63,7 +63,7 @@ if showGUI then
         end
     })
 
-    Tabs.KeyTab:AddKeyBox("300MEM", function(Success, ReceivedKey)
+    Tabs.KeyTab:AddKeyBox("ObfFixed", function(Success, ReceivedKey)
         if Success then
             writefile("Deathsaken/key.json", ReceivedKey)
 			Obsidian:Unload()
